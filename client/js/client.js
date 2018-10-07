@@ -1,6 +1,7 @@
 console.log("Hello");
 const form = document.querySelector('form'); //selecting element from html
 const loadingElement = document.querySelector('.loading');
+const API_URL = 'https://twitterclone-stacksapien.c9users.io/geek';
 loadingElement.style.display = 'none';
 form.addEventListener('submit',(event) => {
    event.preventDefault();
@@ -11,7 +12,13 @@ form.addEventListener('submit',(event) => {
      name,
      content
    };
-   form.style.display = 'none';
+    form.style.display = 'none';
    loadingElement.style.display = '';
-   console.log(geek);
+   fetch(API_URL,{
+     method : 'POST',
+     body : JSON.stringify(geek),
+     headers:{
+       'content-type' : 'application/json'
+     }
+   });
 });
