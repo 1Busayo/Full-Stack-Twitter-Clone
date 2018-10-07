@@ -1,0 +1,33 @@
+{
+  "name": "twitter-clone",
+  "version": "1.0.0",
+  "description": "A full stack twitter clone made using MEAN stack technology.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stacksapien/Full-Stack-Twitter-Clone.git"
+  },
+  "keywords": [
+    "MEAN",
+    "github",
+    "twitter",
+    "clone",
+    "stacksapien",
+    "JAVASCRIPT",
+    "nodejs",
+    "bootstrap",
+    "frontend",
+    "backend",
+    "college",
+    "project"
+  ],
+  "author": "Vishal Verma (Stacksapien)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stacksapien/Full-Stack-Twitter-Clone/issues"
+  },
+  "homepage": "https://github.com/stacksapien/Full-Stack-Twitter-Clone#readme"
+}
