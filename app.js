@@ -2,10 +2,11 @@ const express = require("express");
 const app = express();
 const cors = require("cors"); //middleware to process requests
 const monk = require("monk");
-
+const Filter = require("bad-words");
 
 const db = monk('mongodb://localhost/my_database');
 const geeks = db.get('geeks');
+const filter = new Filter();
 
 app.use(cors()); //Used to allow connection from client side browser as client side browser restrict User Acces to url
 app.use(express.json()); //Used to parse information sent from client side to server side ..Usually sent in json
@@ -30,8 +31,8 @@ app.post('/geek',(req,res) =>{
    if(isValidGeek(req.body)){
     //   insert into db....
        const geek = {
-           name : req.body.name.toString(),
-           content : req.body.content.toString(),
+           name : filter.clean(req.body.name.toString()),
+           content : filter.clean(req.body.content.toString()),
            created : new Date()
        };
        geeks.insert(geek)
