@@ -8,3 +8,7 @@
 .loading{
   text-align: center;
 }
+.geeks{
+  width: 80%;
+  margin: 0 auto;
+}

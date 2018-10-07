@@ -4,7 +4,8 @@ const cors = require("cors"); //middleware to process requests
 const monk = require("monk");
 
 
-const db = monk('mongodb://vishal820verma:qwerty1234567890@ds125423.mlab.com:25423/twitterclone')
+const db = monk('mongodb://localhost/my_database');
+const geeks = db.get('geeks');
 
 app.use(cors()); //Used to allow connection from client side browser as client side browser restrict User Acces to url
 app.use(express.json()); //Used to parse information sent from client side to server side ..Usually sent in json
@@ -18,14 +19,25 @@ function isValidGeek(geek){
     return geek.name && geek.name.toString().trim()!=''&& 
     geek.content && geek.content.toString().trim()!=''; //Checks whether it is sending Empty string or not!
 }
+app.get('/geek',(req,res)=>{
+    geeks.find()
+    .then(geeks=>{
+        res.json(geeks);
+    });
+})
 app.post('/geek',(req,res) =>{
+    
    if(isValidGeek(req.body)){
-       //insert into db....
+    //   insert into db....
        const geek = {
            name : req.body.name.toString(),
-           content : req.body.content.toString()
+           content : req.body.content.toString(),
+           created : new Date()
        };
-       console.log(geek);
+       geeks.insert(geek)
+       .then(createdGeek=>{
+           res.json(createdGeek);
+       });
    }else
    {
        res.status(422);
