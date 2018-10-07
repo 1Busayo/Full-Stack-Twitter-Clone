@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 const cors = require("cors"); //middleware to process requests
+const monk = require("monk");
+
+
+const db = monk('mongodb://vishal820verma:qwerty1234567890@ds125423.mlab.com:25423/twitterclone')
 
 app.use(cors()); //Used to allow connection from client side browser as client side browser restrict User Acces to url
 app.use(express.json()); //Used to parse information sent from client side to server side ..Usually sent in json
