@@ -3,7 +3,6 @@
    - User-Friendly UI
    - Latest Technology at backend.
    - Magic
- ![Full-Stack-Twitter-Clone](Screenshot .jpg)
  # New Features!
   - Share your ideas on click with just your name
   - You can use EMOJI'S also.
