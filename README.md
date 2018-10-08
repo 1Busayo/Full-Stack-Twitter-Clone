@@ -1,10 +1,11 @@
 # Twitter Clone for Geeks!
  Twitter-Clone-for-Geeks is a cloud-enabled & mobile-ready solution to share your code snippets or ideas to large number of users.
    - User-Friendly UI
-  - Latest Technology at backend.
-  - Magic
+   - Latest Technology at backend.
+   - Magic
+ ![Full-Stack-Twitter-Clone](Screenshot .jpg)
  # New Features!
-   - Share your ideas on click with just your name
+  - Share your ideas on click with just your name
   - You can use EMOJI'S also.
   - Filter-out spam,bad-words (Profanity filter)
   - Limits the numbers of requests a user can send
